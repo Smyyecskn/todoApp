@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import axios from "axios";
 
 const AddTodo = ({ getTodos, todoValues, setTodoValues }) => {
@@ -58,7 +57,7 @@ const AddTodo = ({ getTodos, todoValues, setTodoValues }) => {
         onClick={handleSubmit}
         className="w-[30%] mx-auto font-bold bg-purple-400 rounded-2xl "
       >
-        Add
+        {todoValues?._id ? "Update" : "Add"}
       </button>
     </div>
   );

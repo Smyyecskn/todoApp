@@ -30,7 +30,7 @@ module.exports = {
   },
 
   update: async (req, res) => {
-    const data = await Todo.updateOne({ _id: req.params }, req.body);
+    const data = await Todo.updateOne({ _id: req.params.id }, req.body);
     res.status(201).send({
       error: false,
       message: "Todo update successfully",
